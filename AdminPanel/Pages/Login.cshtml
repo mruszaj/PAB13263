@@ -1,0 +1,28 @@
+﻿@page
+@model AdminPanel.Pages.LoginModel
+@{
+    ViewData["Title"] = "Logowanie";
+}
+
+<h2>Logowanie</h2>
+
+<form method="post">
+    <div>
+        <label>Email:</label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label>Hasło:</label>
+        <input asp-for="Password" type="password" />
+    </div>
+    <div>
+        <button type="submit">Zaloguj</button>
+    </div>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div style="color:red;">
+        Błąd logowania. Spróbuj ponownie.
+    </div>
+}

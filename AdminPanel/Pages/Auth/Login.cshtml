@@ -1,0 +1,22 @@
+﻿@page
+@model AdminPanel.Pages.Auth.LoginModel
+@{
+    ViewData["Title"] = "Logowanie";
+}
+
+<h2>Logowanie</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="Email">Email:</label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label asp-for="Password">Hasło:</label>
+        <input asp-for="Password" type="password" />
+    </div>
+    <div>
+        <span style="color:red">@Model.ErrorMessage</span>
+    </div>
+    <button type="submit">Zaloguj</button>
+</form>
